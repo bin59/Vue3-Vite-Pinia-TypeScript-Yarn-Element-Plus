@@ -22,35 +22,24 @@
 </template>
 
 <script setup lang="ts">
-const arr = new Array(20).fill(0)
-const imgList = new Array()
-
-// ImgUrl   https://www.imgurl.org/vip/manage/upload
-const ImgUrl = [
-  'https://s3.bmp.ovh/imgs/2023/01/02/c91f77312319146d.jpg',
-  'https://s3.bmp.ovh/imgs/2023/01/02/61ebe5c035d38276.jpg',
-  'https://s3.bmp.ovh/imgs/2023/01/02/cb6b50612c739dde.jpg',
-  'https://s3.bmp.ovh/imgs/2023/01/02/ce63f2538e4b9cf8.jpg',
-  'https://s3.bmp.ovh/imgs/2023/01/02/3dd162d7d25778fb.jpg',
-  'https://s3.bmp.ovh/imgs/2023/01/02/97d5dad1e1b290f2.jpg',
-  'https://s3.bmp.ovh/imgs/2023/01/02/04d65851461797cb.jpg',
-  'https://s3.bmp.ovh/imgs/2023/01/02/14db0f9cb5bc8876.jpg',
-  'https://s3.bmp.ovh/imgs/2023/01/02/7712cc3a3eba3a64.jpg',
-  'https://s3.bmp.ovh/imgs/2023/01/02/3c55cd28edac6814.jpg',
-  'https://s3.bmp.ovh/imgs/2023/01/02/eed5f76b11df19f2.jpg',
-  'https://s3.bmp.ovh/imgs/2023/01/02/460320a1eb93518f.jpg',
-]
-
-// 路过图床  https://imgse.com/binbin59
-const imgse = [
-  'https://s1.ax1x.com/2022/06/12/Xg6PbV.jpg',
-  'https://s1.ax1x.com/2022/12/31/pSCiOO0.jpg',
-]
-imgList.push(...ImgUrl, ...imgse)
-
-arr.forEach((item, idx) => {
-  imgList.push(`/src/assets/picture/img${idx + 1}.jpg`)
-})
+// ImgUrl   https://www.imgurl.org/vip/manage/upload  图片托管网站
+const baseImgUrl = new String('https://s3.bmp.ovh/imgs/')
+const imgList = [
+  '2024/01/14/fc42a833e1a8bfbb.jpg',
+  '2024/01/14/e2f4a51db64005bd.jpg',
+  '2024/01/14/6bdc547a4979a35c.jpg',
+  '2024/01/14/095739704eaa8a96.png',
+  '2024/01/14/798b63741d519d60.png',
+  '2024/01/14/a7ad8fe6884df1f9.jpg',
+  '2024/01/14/8231d78588c54174.jpg',
+  '2024/01/14/dfb63b984600a672.jpg',
+  '2024/01/14/5452fdabc55dfebc.png',
+  '2024/01/14/9130a01569b44a75.jpg',
+  '2024/01/14/4296e30b551256bc.jpg',
+  '2024/01/14/3c170ea71b054125.jpg',
+  '2024/01/14/75b9f77e7eb76697.jpg',
+  '2024/01/14/3ba3ec25859d4d4a.jpg',
+].map(item => (item = baseImgUrl + item))
 </script>
 <style>
 /*

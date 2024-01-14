@@ -1,15 +1,15 @@
-import home from '@/view/home/home.vue'
+import Picture from '@/view/Picture/Picture.vue'
 import type { RouteRecordRaw } from 'vue-router'
 import { createRouter, createWebHistory } from 'vue-router'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/Me', //使用redirect重定向，默认系统显示的第一页
+    redirect: '/Picture', //使用redirect重定向，默认系统显示的第一页
   },
   {
-    name: 'home',
-    path: '/home',
-    component: home,
+    name: 'Picture',
+    path: '/Picture',
+    component: Picture,
     meta: { title: '首页' },
     children: [
       {
