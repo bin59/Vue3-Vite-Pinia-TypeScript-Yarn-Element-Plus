@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-
+import axios from './utils/axios'
 // VMdEditor Start
 // @ts-ignore
 import VueMarkdownEditor from '@kangc/v-md-editor'
@@ -70,6 +70,7 @@ app.config.globalProperties.$FormatDate2 = FormatDate2
 // 2.provide / inject （推荐） 通过provide将组件或者方法、变量挂载在全局
 app.provide('FormatDate', FormatDate)
 app.provide('CompleteDeepClone', CompleteDeepClone)
+app.provide('$http', axios)
 
 app.mount('#app')
 // 把vue实例挂载在window.vm,方便使用vue的实例

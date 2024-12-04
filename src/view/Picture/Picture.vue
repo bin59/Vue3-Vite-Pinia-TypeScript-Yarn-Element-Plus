@@ -22,24 +22,12 @@
 </template>
 
 <script setup lang="ts">
-// ImgUrl   https://www.imgurl.org/vip/manage/upload  图片托管网站
-const baseImgUrl = new String('https://s3.bmp.ovh/imgs/')
-const imgList = [
-  '2024/01/14/fc42a833e1a8bfbb.jpg',
-  '2024/01/14/e2f4a51db64005bd.jpg',
-  '2024/01/14/6bdc547a4979a35c.jpg',
-  '2024/01/14/095739704eaa8a96.png',
-  '2024/01/14/798b63741d519d60.png',
-  '2024/01/14/a7ad8fe6884df1f9.jpg',
-  '2024/01/14/8231d78588c54174.jpg',
-  '2024/01/14/dfb63b984600a672.jpg',
-  '2024/01/14/5452fdabc55dfebc.png',
-  '2024/01/14/9130a01569b44a75.jpg',
-  '2024/01/14/4296e30b551256bc.jpg',
-  '2024/01/14/3c170ea71b054125.jpg',
-  '2024/01/14/75b9f77e7eb76697.jpg',
-  '2024/01/14/3ba3ec25859d4d4a.jpg',
-].map(item => (item = baseImgUrl + item))
+import { inject } from 'vue'
+
+const imgList = [].map(item => (item = item))
+
+const $http: any = inject('$http')
+$http.get('jeecg-boot/sys/app', {})
 </script>
 <style>
 /*

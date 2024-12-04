@@ -90,12 +90,15 @@ import { inject, ref } from 'vue'
 // 通过inject获取挂载在全局的globalFunc方法
 const FormatDate: any = inject('FormatDate')
 const touxiang = '/src/assets/picture/img1.jpg'
+const $http: any = inject('$http')
 
 const textarea = ref('')
 const target = ref('')
 function change(e: string) {
   searchStrIndexOf(textarea.value, target.value)
 }
+
+$http.get('http://192.168.2.87:8080/jeect-boot/sys/user', {})
 /**
  * str { String } 完整字符串
  * tatget { String } 目标对象，要查找的字符串
